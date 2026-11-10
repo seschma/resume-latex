@@ -1,5 +1,7 @@
 # resume-latex
-My Resume in LaTeX. This is a simple Resume template in LaTeX that can be published using `pdfLaTeX`.
+My Resume in LaTeX. This is a simple single column Resume template in LaTeX that can be published using `pdfLaTeX`.
+
+I prefer to use a `.cls` class file to keep the main `.tex` file cleaner.
 
 ## Setup
 On Debian Linux, install texlive:
