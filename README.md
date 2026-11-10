@@ -1,10 +1,14 @@
 # resume-latex
-My Resume in LaTeX.
+My Resume in LaTeX. This is a simple Resume template in LaTeX that can be published using `pdfLaTeX`.
 
 ## Setup
-On Debian Linux:
+On Debian Linux, install texlive:
 ```sh
 sudo apt install texlive
+```
+To publish the resume as a PDF:
+```sh
+pdflatex resume.tex
 ```
 
 ## License
