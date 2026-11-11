@@ -20,28 +20,40 @@
   right=20mm,
 }
 
+% Set PDF metadata
+%\hypersetup{
+%  pdftitle={\@resumeauthor},
+%  pdfauthor={\@resumeauthor}
+%}
+
+% Remove page numbers
+\pagestyle{empty}
+
 % Do not indent paragraphs
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{0em}
 
 % Commands
 \newcommand*{\resumeauthor}[1]{\def\@resumeauthor{#1}}
+\newcommand*{\address}[1]{\def\@address{#1}}
 \newcommand*{\phone}[1]{\def\@phone{#1}}
 \newcommand*{\email}[1]{\def\@email{#1}}
 \newcommand*{\github}[1]{\def\@github{#1}}
 
-\newcommand{\printauthor}[1]{
+\newcommand{\printheader}[1]{
   \begin{center}
     \textbf{\huge\@resumeauthor}\par%
+    \@address
     \@phone
     \@email
     \@github
   \end{center}
 }
 
-\newcommand{\resumesubsection}[2]{
-  {#1}\hfill{#2}
+\newcommand{\resumesubsection}[4]{%
+  {#1}\hfill{#2}\par
+  {#3}\hfill{#4}\par
 }
 
-\newcommand{\resumeskills}[2]{
+\newcommand{\resumeskills}[2]{%
   \textbf{#1}: {#2}\par
 }
