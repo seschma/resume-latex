@@ -47,7 +47,7 @@
 \newcommand{\printheader}[1]{
   \begin{center}
     \textbf{\huge\@resumeauthor}\par%
-    \smallskip
+    \medskip
     \@address \quad|\quad
     \@phone \quad|\quad
     \href{mailto:\@email}{\@email} \quad|\quad
