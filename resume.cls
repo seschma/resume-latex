@@ -9,8 +9,8 @@
 %\RequirePackage[l2tabu,orthodox]{nag}
 
 % Packages
-\RequirePackage[a4paper]{geometry} % used to set page margins
-\RequirePackage{hyperref}          % used for PDF metadata and URL hyperlinks  
+\RequirePackage{geometry}  % used to set page margins
+\RequirePackage{hyperref}  % used for PDF metadata and URL hyperlinks  
 
 % Set Resume geometry
 \geometry{
@@ -25,10 +25,16 @@
 
 % Commands
 \newcommand*{\resumeauthor}[1]{\def\@resumeauthor{#1}}
+\newcommand*{\phone}[1]{\def\@phone{#1}}
+\newcommand*{\email}[1]{\def\@email{#1}}
+\newcommand*{\github}[1]{\def\@github{#1}}
 
 \newcommand{\printauthor}[1]{
   \begin{center}
-    \huge{\@resumeauthor}
+    \textbf{\huge\@resumeauthor}\par%
+    \@phone
+    \@email
+    \@github
   \end{center}
 }
 
@@ -37,5 +43,5 @@
 }
 
 \newcommand{\resumeskills}[2]{
-  {#1}: {#2}\par
+  \textbf{#1}: {#2}\par
 }
