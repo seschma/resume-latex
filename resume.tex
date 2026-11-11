@@ -1,29 +1,13 @@
 %% resume.tex
-\documentclass[11pt]{article}
 
-% Packages
-\usepackage[a4paper]{geometry} % used to set page margins
+\documentclass[11pt]{resume}
 
-\geometry{
-  top=20mm,
-  bottom=20mm,
-  left=20mm,
-  right=20mm,
- }
-
-
-% Commands
-\newcommand{\resumesubsection}[2]{
-  #1 \hfill #2
-}
-
-\newcommand{\resumeskills}[2]{
-  #1: #2
-}
+\resumeauthor{Stefan Eschmann}
 
 \begin{document}
 
-Stefan Eschmann\\
+\printauthor%
+
 seschma@gmail.com\\
 https://github.com/seschma
 
@@ -41,8 +25,8 @@ extra parameters or packages included.
 
 \section*{Skills}
 
-\resumeskills{Programming}{Python, Bash, \LaTeX}\\
-\resumeskills{Tools}{Git, Linux}\\
+\resumeskills{Programming}{Python, Bash, \LaTeX}
+\resumeskills{Tools}{Git, Linux}
 \resumeskills{Languages}{English, German}
   
 \end{document}
