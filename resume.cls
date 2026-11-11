@@ -9,6 +9,7 @@
 %\RequirePackage[l2tabu,orthodox]{nag}
 
 % Packages
+\usepackage[T1]{fontenc} 
 \RequirePackage{geometry}  % used to set page margins
 \RequirePackage{hyperref}  % used for PDF metadata and URL hyperlinks  
 
@@ -18,6 +19,10 @@
   bottom=20mm,
   left=20mm,
   right=20mm,
+}
+
+\hypersetup{
+  hidelinks
 }
 
 % Set PDF metadata
@@ -42,10 +47,11 @@
 \newcommand{\printheader}[1]{
   \begin{center}
     \textbf{\huge\@resumeauthor}\par%
-    \@address
-    \@phone
-    \@email
-    \@github
+    \smallskip
+    \@address \quad|\quad
+    \@phone \quad|\quad
+    \href{mailto:\@email}{\@email} \quad|\quad
+    \href{https://\@github}{\@github}
   \end{center}
 }
 
