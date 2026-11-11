@@ -6,9 +6,9 @@ I prefer to use a `.cls` class file to keep the main `.tex` file cleaner.
 I have tried to use minimal LaTeX packages and avoid LaTeX formatting such as `\vspace{-7pt}`. It also aims to be ATS compatible.
 
 ## Setup
-On Debian Linux, install texlive:
+On Debian Linux, install `texlive`, `texlive-latex-extra` is required for `titlesec` package:
 ```sh
-sudo apt install texlive
+sudo apt install texlive texlive-latex-extra
 ```
 To publish the resume as a PDF:
 ```sh
