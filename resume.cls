@@ -23,12 +23,13 @@
 \RequirePackage{geometry}    % required to set PDF page margins
 \RequirePackage{hyperref}    % required for PDF metadata and URL hyperlinks  
 \RequirePackage{titlesec}    % required to customize sections
+\RequirePackage{enumitem}    % required for customizing item spacing
 \RequirePackage{xcolor}      % required for colors such as grey in section line dividers
 
 % Set Resume geometry
 \geometry{
-  top=20mm,
-  bottom=20mm,
+  top=15mm,
+  bottom=15mm,
   left=20mm,
   right=20mm,
 }
@@ -66,7 +67,9 @@
 % Set section spacing before/after
 \titlespacing{\section}{0em}{1em}{1em}  
 
-  
+% Item spacing
+\setlist{leftmargin=2em,itemsep=-.25em,before=\vspace{-.5em},after=\vspace{.25em}}
+
 % Commands
 \newcommand*{\resumeauthor}[1]{\def\@resumeauthor{#1}}
 \newcommand*{\address}[1]{\def\@address{#1}}
@@ -106,4 +109,10 @@
 % \resumeproject{Project name}{Language Type}{Year}
 \newcommand{\resumeproject}[3]{%
   \textbf{#1} $|$ \textit{#2}\hfill{#3}\par
+}
+
+% Usage:
+% \resumecerts{Certification name}{Details}{Year}
+\newcommand{\resumecerts}[3]{%
+  \textbf{#1} -- {#2}\hfill{#3}\par
 }
