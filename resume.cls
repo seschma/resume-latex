@@ -23,16 +23,15 @@
   right=20mm,
 }
 
-% Set hyperlinks (requires hyperref package)
-\hypersetup{
-  hidelinks
+% Set hyperlinks and PDF metadata (requires hyperref package)
+\AtEndPreamble{
+  \hypersetup{
+    hidelinks,
+    pdftitle={\@resumeauthor~-- R\'{e}sum\'{e}},
+    pdfauthor={\@resumeauthor},
+    pdfsubject={R\'{e}sum\'{e} of \@resumeauthor},
+    pdfkeywords={R\'{e}sum\'{e}, Software Engineer, Data Engineer}}
 }
-
-% Set PDF metadata
-%\hypersetup{
-%  pdftitle={\@resumeauthor},
-%  pdfauthor={\@resumeauthor}
-%}
 
 % Remove page numbers
 \pagestyle{empty}
@@ -47,7 +46,7 @@
   {}                                       % Remove section number by leaving empty
   {0em}                                    % Space between number and title
   {}                                       % Code before the title
-  [{\color{lightgray}\titlerule[0.8pt]}]   % Line below the title
+  [{\color{lightgray}\titlerule[.05em]}]    % Line below the title
 
 % Commands
 \newcommand*{\resumeauthor}[1]{\def\@resumeauthor{#1}}
@@ -56,13 +55,16 @@
 \newcommand*{\email}[1]{\def\@email{#1}}
 \newcommand*{\github}[1]{\def\@github{#1}}
 
-\newcommand{\printheader}{
+\newcommand{\printheader}{%
   \begin{center}
     \textbf{\huge\@resumeauthor}\par%
     \medskip
-    \@address \quad|\quad
-    \@phone \quad|\quad
-    \href{mailto:\@email}{\@email} \quad|\quad
+    \@address
+    \quad|\quad
+    \@phone
+    \quad|\quad
+    \href{mailto:\@email}{\@email}
+    \quad|\quad
     \href{https://\@github}{\@github}
   \end{center}
 }
